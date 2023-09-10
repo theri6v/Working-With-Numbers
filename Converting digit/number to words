@@ -1,0 +1,96 @@
+Here, in this page we will discuss the program for Digit/number to words in Python .The conversion of numbers in words is just a conversion of numeric values to the English format of reading numbers. This code supports the conversion of numbers from 0 – 9999 in English format.
+
+digit/number to words in python
+Different places for numbers are:-
+
+Single digits:- Ones
+Two Digits:-Tens
+Three Digits:- Hundreds
+Four Digits:- Thousands
+Method 1 Algorithm
+We will be using num2words library for this
+
+from num2words import num2words
+
+# Most common usage.
+print(num2words(11098))
+
+# can also specify this for -th format
+print(num2words(11098, to='ordinal'))
+
+//This code will not run on normal compiler, You need to install num2words.
+Method 2 Algorithm
+ Taking input as a string from the user.
+ Check the length of the input.
+ if the length is zero print ’empty’ and if the length is greater than 4 print ‘give a string of specific length’
+ if length id between 1 – 4, Create arrays for different values.
+ Checking the length of the string.
+ According to the place of the digit, we will show the output.
+Code in Python
+Run
+def convert_to_words(num):
+ 
+    l = len(num)
+ 
+    # Base cases
+    if (l == 0):
+        print("empty string")
+        return
+ 
+    if (l > 4):
+        print("Length more than 4 is not supported")
+        return
+ 
+    single_digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+ 
+    two_digits = ["", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+ 
+    tens_multiple = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+ 
+    tens_power = ["hundred", "thousand"]
+ 
+    print(num, ":", end=" ")
+ 
+    if (l == 1):
+        print(single_digits[ord(num[0]) - 48])
+        return
+ 
+    x = 0
+    while (x < len(num)):
+        if (l >= 3):
+            if (ord(num[x]) - 48 != 0):
+                print(single_digits[ord(num[x]) - 48],
+                      end=" ")
+                print(tens_power[l - 3], end=" ")
+ 
+            l -= 1
+ 
+        else:
+ 
+            if (ord(num[x]) - 48 == 1):
+                sum = (ord(num[x]) - 48 +
+                       ord(num[x+1]) - 48)
+                print(two_digits[sum])
+                return
+ 
+            elif (ord(num[x]) - 48 == 2 and
+                  ord(num[x + 1]) - 48 == 0):
+                print("twenty")
+                return
+ 
+            else:
+                i = ord(num[x]) - 48
+                if(i > 0):
+                    print(tens_multiple[i], end=" ")
+                else:
+                    print("", end="")
+                x += 1
+                if(ord(num[x]) - 48 != 0):
+                    print(single_digits[ord(num[x]) - 48])
+        x += 1
+ 
+ 
+# Driver Code
+convert_to_words("1121") 
+Output:
+1121 : one thousand one hundred twenty one
