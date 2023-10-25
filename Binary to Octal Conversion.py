@@ -9,9 +9,10 @@ Make sure that you have gone through these approaches below –
 
 Binary to Decimal Conversion
 Decimal to Octal Conversion
------------------------------------------Method 1 Code---------------------------------------------------------
-Run
-# function to convert binary to octal
+---------------------------------------------------------------------------------------------'''Method 1'''---------------------------------------------------------------------------------------------
+
+'''function to convert binary to octal'''
+
 def convert(num):
     octalDigit = 0
     count = 1
@@ -62,7 +63,7 @@ Octal to Binary conversion
 
 Quadrants in which a given coordinate lies
 
------------------------------------------------------Method 2:---------------------------------------
+---------------------------------------------------------------------------------------------'''Method 2'''---------------------------------------------------------------------------------------------
 
 Method 2 uses the concept of grouping 3 successive digits/bits of the binary number and calculating octal digits against each grouping
 
@@ -72,8 +73,10 @@ We will need to print the array in reverse to get actual octal equivalent.
 
 binary to octal conversion in Python
 Method 2 Code
-Run
-# function to convert binary to octal
+
+
+'''function to convert binary to octal'''
+
 def convert(num):
     octalDigit = 0
     count = 1
@@ -107,6 +110,7 @@ def convert(num):
 
 binary = 10101111
 convert(binary)
+
 Output :
 Enter binary number: 10101111
 257
