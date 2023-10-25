@@ -1,21 +1,24 @@
-Here, in this page we will discuss the program that count the number of integers which has exactly x divisors in python . Numbers dividing with self or 1 are called prime numbers but numbers having multiple divisors are called composite numbers. 
+#Here,we will discuss the program that count the number of integers which has exactly x divisors in python . 
+#Numbers dividing with self or 1 are called prime numbers but numbers having multiple divisors are called composite numbers. 
 
-number of integers which has exactly x divisors in python
-Here, in this page we will discuss the two different ways for finding the required count of numbers that have exactly x divisors. These two methods are given below,
+#number of integers which has exactly x divisors in python
+#Here, in this page we will discuss the two different ways for finding the required count of numbers that have exactly x divisors. These two methods are given below,
 
-Method 1 : Naive approach
-Method 2 : Efficient approach
+'''Method 1 : Naive approach'''
+'''Method 2 : Efficient approach'''
 
-----------------------------------------------Method 1 :----------------------------------------------------------------------
-Declare a variable count =0, to count the required numbers with x factors.
-Run a loop for range 1 to n.
-Inside that take a variable count_factors = 0, that will count the factors of ith.
-Now, run a inner loop.
-And increase the count_factors if it’s is factor of ith number.
-Check if count_factors == X, then increment the count by 1.
-At last print the count value.
-Method 1 : Code in Python
-Run
+----------------------------------------------------------------------'''Method 1 : Naive approach'''----------------------------------------------------------------------
+
+#Declare a variable count =0, to count the required numbers with x factors.
+#Run a loop for range 1 to n.
+#Inside that take a variable count_factors = 0, that will count the factors of ith.
+#Now, run a inner loop.
+#And increase the count_factors if it’s is factor of ith number.
+#Check if count_factors == X, then increment the count by 1.
+#At last print the count value.
+
+'''Method 1 : Code in Python'''
+
 Number = 7
 Divisor = 2
 #count is to count total number of Numbers with exact divisor
@@ -35,25 +38,16 @@ for i in range(1,Number+1):
 
 #for break in line between Numbers and total count
 print(count)
+
 Output :
 4
-Related Pages
-Counting number of days in a given month of a year
- 
-Finding Number of times x digit occurs in a given input
- 
-Finding Roots of a quadratic equation
 
-Power of a Number 
+----------------------------------------------------------------------'''Method 2 : Efficient approach'''----------------------------------------------------------------------
 
-Prime Number
+#In this method we will use the efficient way for counting the factors that used in method 1. We use the sieve of eratosthenes for counting the factors.
 
-------------------------------------------------------------Method 2 :--------------------------------------------------
+'''Method 2 : Code in Python'''
 
-In this method we will use the efficient way for counting the factors that used in method 1. We use the sieve of eratosthenes for counting the factors.
-
-Method 2 : Code in Python
-Run
 import math;
 
 def sieve(primes, x):
@@ -116,5 +110,6 @@ def countNDivisors(a, b, n):
 n = 7;
 x = 2;
 print(countNDivisors(1, n, x));
+
 Output :
 4
