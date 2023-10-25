@@ -1,25 +1,25 @@
-On this page we will learn how to create a python program for Hexadecimal to Decimal Conversion.
+#On this page we will learn how to create a python program for Hexadecimal to Decimal Conversion.
+#Hexadecimal has numbers in the range of [0, 15] and to achieve so it also uses some characters of alphabets.
+#Python program to convert hexadecimal to decimal
 
-Hexadecimal has numbers in the range of [0, 15] and to achieve so it also uses some characters of alphabets.
-
-Python program to convert hexadecimal to decimal
 Hexadecimal Working :
-As discussed in hexadecimal numbers range from 0 to 15 so 0 to 9 are represented same as integer values but after 9 alphabets are used as shown below :
 
-A = 10
-B = 11
-C = 12
-D = 13
-E = 14
-F = 15
-How To Convert From Hexadecimal to Decimal Manually?
-For a user input num. This requires you to know ASCII values, please check the ASCII table here 
+#As discussed in hexadecimal numbers range from 0 to 15 so 0 to 9 are represented same as integer values but after 9 alphabets are used as shown below :
 
-To convert a hexadecimal to a decimal manually, you must start by multiplying the hex number by 16. Then, you raise it to a power of 0 and increase that power by 1 each time according to the hexadecimal number equivalent.
+#A = 10
+#B = 11
+#C = 12
+#D = 13
+#E = 14
+#F = 15
 
-We start from the right of the hexadecimal number and go to the left when applying the powers. Each time you multiply a number by 16, the power of 16 increases.
+#How To Convert From Hexadecimal to Decimal Manually?
+#For a user input num. This requires you to know ASCII values, please check the ASCII table here 
+#To convert a hexadecimal to a decimal manually, you must start by multiplying the hex number by 16. 
+#Then, you raise it to a power of 0 and increase that power by 1 each time according to the hexadecimal number equivalent.
+#We start from the right of the hexadecimal number and go to the left when applying the powers. Each time you multiply a number by 16, the power of 16 increases.
 
-When converting a C9 hexadecimal to a decimal your work should look something like this:
+#When converting a C9 hexadecimal to a decimal your work should look something like this:
 
 Example :
 
@@ -30,8 +30,10 @@ Then, we add the results.
 192 + 9 = 201 
 Hexadecimal	1	2	3	4	5	6	7	8	9	A	B	C	D	E	F
 Decimal	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
-Python Code
-Run
+
+
+#Python Code
+
 def convert(hex):
     l = len(hex)
     decimal = 0
@@ -65,5 +67,6 @@ def convert(hex):
 hex = "C9"
 
 print("decimal value of", hex, "is", convert(hex))
+
 Output
 Decimal value of C9 is 201
